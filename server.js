@@ -17,7 +17,9 @@ app.use(cookieParser())
 app.use(morgan("tiny"))
 app.use(cors({
     origin: process.env.FRONTEND_URL,
-    credentials:true
+    credentials:true, 
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
 }))
 app.use(express.json())
 
