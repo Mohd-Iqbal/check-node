@@ -46,10 +46,10 @@ app.use("/api/login",login)
 app.use("/api/profile",profile)
 app.use("/api/todo",todo)
 
-mongoose.set('strictQuery', true);
-mongoose.connect("mongodb+srv://iqbal:123ithinkso123@cluster0.vzl69kn.mongodb.net/?retryWrites=true&w=majority")
+mongoose.set('strictQuery', false);
+mongoose.connect("mongodb+srv://iqbal:123ithinkso123@cluster0.vzl69kn.mongodb.net/")
 .then(()=>{console.log(`Connected to mongodb...`)})
-
+// mongodb+srv://iqbal:123ithinkso123@cluster0.vzl69kn.mongodb.net/?retryWrites=true&w=majority
 
 app.listen(process.env.PORT,()=>{
     console.log("Server connected to http://localhost:8080")
